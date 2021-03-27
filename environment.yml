@@ -1,0 +1,30 @@
+name: cell_viewer
+channels:
+  - anaconda
+  - conda-forge
+  - defaults
+dependencies:
+  - dask
+  - dask-image
+  - invoke
+  - jupyter
+  - jupyterlab
+  - matplotlib
+  - napari
+  - numpy
+  - pandas
+  - pandas-profiling
+  - pip
+  - pyjanitor
+  - pyqt
+  - python=3.9.1
+  - qt>=5.12.3
+  - read-roi
+  - scikit-learn
+  - seaborn
+  - shapely
+  - statsmodels
+  - pip:
+      - nbdime
+      - pyhere
+      - pylint
