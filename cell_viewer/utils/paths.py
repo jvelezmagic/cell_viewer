@@ -45,3 +45,5 @@ for dir_type in [
     ]:
     dir_var = '_'.join(dir_type) + "_dir"
     exec(f"global {dir_var}; {dir_var} = make_dir_function({dir_type})")
+
+uJ_data_dir = make_dir_function(["data", "raw", "uJ_data"])
