@@ -24,7 +24,7 @@ dependencies:
   - seaborn
   - shapely
   - statsmodels
+  - nbdime
+  - pylint
   - pip:
-      - nbdime
       - pyhere
-      - pylint
