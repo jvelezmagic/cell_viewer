@@ -67,6 +67,16 @@ target/
 # ipynb checkpoints
 .ipynb_checkpoints
 
-.vscode/
-
 .DS_Store
+
+# vscode
+
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Local History for Visual Studio Code
+.history/
