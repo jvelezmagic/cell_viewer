@@ -1,6 +1,7 @@
 name: cell_viewer
 channels:
   - anaconda
+  - bioconda
   - conda-forge
   - defaults
 dependencies:
