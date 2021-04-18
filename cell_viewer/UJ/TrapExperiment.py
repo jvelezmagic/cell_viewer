@@ -1,14 +1,8 @@
-from dataclasses import dataclass, fields
-from dask_image.imread import imread
-from typing import (
-    AnyStr,
-    Union,
-    Iterable,
-)
-
-#from skimage.io import Image
-
 import pathlib
+from dataclasses import dataclass, fields
+from typing import AnyStr, Iterable, Union
+
+from dask_image.imread import imread
 
 Path = Union[pathlib.PosixPath, pathlib.WindowsPath]
 

@@ -1,21 +1,9 @@
-from collections import defaultdict
-from cell_viewer.UJ.TrapExperiment import (
-    Path,
-    TrapExperiment,
-)
-
-from dataclasses import (
-    dataclass,
-    field,
-)
-
-from typing import (
-    AnyStr,
-    List,
-    Union,
-)
-
 import pathlib
+from collections import defaultdict
+from dataclasses import dataclass, field
+from typing import AnyStr, List, Union
+
+from cell_viewer.UJ.TrapExperiment import Path, TrapExperiment
 
 @dataclass
 class UJExperiment:
