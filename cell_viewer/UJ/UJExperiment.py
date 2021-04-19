@@ -5,8 +5,12 @@ from typing import AnyStr, List, Union
 
 from cell_viewer.UJ.TrapExperiment import TrapExperiment
 
+
 @dataclass
 class UJExperiment:
+    """Class to access to UJExperiment data directly.
+    """
+
     name: str
     path: Path
     _path: Path = field(init=False, repr=False)
@@ -40,7 +44,7 @@ class UJExperiment:
             "data_rois",
             "data_segmentable",
             "data_tif",
-            "figures"
+            "figures",
         ]
 
     def trap_data(self, trap_glob: AnyStr):
