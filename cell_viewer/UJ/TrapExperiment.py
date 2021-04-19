@@ -1,4 +1,3 @@
-import pathlib
 from dataclasses import dataclass, fields
 from pathlib import Path
 from typing import AnyStr, Callable, Iterable
