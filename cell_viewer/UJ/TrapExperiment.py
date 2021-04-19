@@ -4,7 +4,6 @@ from typing import AnyStr, Callable, Iterable
 
 from dask_image.imread import imread
 
-
 @dataclass
 class TrapExperiment:
     data_cells: Path = None
