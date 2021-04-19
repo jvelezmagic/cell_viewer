@@ -1,9 +1,9 @@
-import pathlib
+from pathlib import Path
 from collections import defaultdict
 from dataclasses import dataclass, field
 from typing import AnyStr, List, Union
 
-from cell_viewer.UJ.TrapExperiment import Path, TrapExperiment
+from cell_viewer.UJ.TrapExperiment import TrapExperiment
 
 @dataclass
 class UJExperiment:
@@ -19,9 +19,9 @@ class UJExperiment:
     def path(self, path: Union[AnyStr, Path]) -> None:
 
         if isinstance(path, str):
-            path = pathlib.Path(path)
+            path = Path(path)
 
-        if isinstance(path, (pathlib.PosixPath, pathlib.WindowsPath)):
+        if isinstance(path, Path):
             self._path = path
 
             for PATH in self._PATHS:

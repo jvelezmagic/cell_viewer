@@ -1,10 +1,10 @@
 import pathlib
 from dataclasses import dataclass, fields
+from pathlib import Path
 from typing import AnyStr, Iterable, Union
 
 from dask_image.imread import imread
 
-Path = Union[pathlib.PosixPath, pathlib.WindowsPath]
 
 @dataclass
 class TrapExperiment:
@@ -24,16 +24,16 @@ class TrapExperiment:
             if search_on is not None and field.name not in search_on:
                 continue
 
-            attr = getattr(self, field.name)
+            attr_value = getattr(self, field.name)
 
             def read_tif(path: Path, compute: bool = False):
                 image = imread(str(path.joinpath("*.tif")))
                 
                 return image if not compute else image.compute()
 
-            if isinstance(attr, (pathlib.PosixPath, pathlib.WindowsPath)):
+            if isinstance(attr_value, Path):
 
-                dirs_with_tifs = {path.parent for path in attr.rglob("*.tif")}
+                dirs_with_tifs = {path.parent for path in attr_value.rglob("*.tif")}
 
                 readed_tif = {
                     directory.name:
