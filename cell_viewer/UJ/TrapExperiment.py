@@ -28,16 +28,19 @@ class TrapExperiment:
 
             def read_tif(path: Path, compute: bool = False):
                 image = imread(str(path.joinpath("*.tif")))
-
+                
                 return image if not compute else image.compute()
 
             if isinstance(attr, (pathlib.PosixPath, pathlib.WindowsPath)):
-                paths = {
-                    path.parent.name:
-                    read_tif(path = path.parent, compute = compute)
-                    for path in attr.rglob("*.tif")
+
+                dirs_with_tifs = {path.parent for path in attr.rglob("*.tif")}
+
+                readed_tif = {
+                    directory.name:
+                    read_tif(path=directory, compute=compute)
+                    for directory in dirs_with_tifs
                 }
 
-                tifs[field.name] = paths
+                tifs[field.name] = readed_tif
 
         return tifs
