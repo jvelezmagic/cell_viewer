@@ -1,5 +1,6 @@
 import ast
 from dataclasses import dataclass, fields
+from os import read
 from pathlib import Path
 from typing import AnyStr, Callable, Iterable
 
@@ -140,6 +141,7 @@ class TrapExperiment:
                 for directory in dirs_with_data
             }
 
-            data_dict[field.name] = readed_data
+            if readed_data:
+                data_dict[field.name] = readed_data
 
         return data_dict
