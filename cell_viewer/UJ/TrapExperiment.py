@@ -18,7 +18,7 @@ class TrapExperiment:
 
     data_cells: Path = None
     data_cells_tracked: Path = None
-    data_mask: Path = None
+    data_masks: Path = None
     data_raw: Path = None
     data_rois: Path = None
     data_segmentable: Path = None
