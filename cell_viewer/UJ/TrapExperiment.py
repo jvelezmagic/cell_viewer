@@ -1,13 +1,13 @@
+import ast
 from dataclasses import dataclass, fields
 from pathlib import Path
 from typing import AnyStr, Callable, Iterable
 
 import janitor
-import ast
-import shapely.geometry as geometry
-import shapely.ops
 import numpy as np
 import pandas as pd
+import shapely.geometry as geometry
+import shapely.ops
 from dask_image.imread import imread
 
 
